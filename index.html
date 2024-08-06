@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Form</title>
-    <link rel="stylesheet" href="style.css">
+    <title>zak64 converter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <form class="responsive-form">
-            <input type="text" placeholder="Enter text" required>
-            <button type="submit">Submit</button>
+        <form class="responsive-form" id="form" action="https://api.web3forms.com/submit" method="POST">
+
+            <label for="text">Enter Text:</label>
+            <input type="hidden" name="access_key" value="3d2a4918-ac8a-4008-a885-b175d929b5b8">
+            <input type="text" id="text" name="code" required>
+            <button type="submit" id="submit-btn">convert</button>
+            <div class="custom-loader" id="custom-loader">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-percent" id="progress-percent">0%</div> <!-- New element for percentage -->
+            </div>
         </form>
+        <div class="code-display" id="code-display"></div>
     </div>
+
+    <script src="script.js"></script
 </body>
 </html>
