@@ -1,50 +1,132 @@
 /* styles.css */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #fff; /* White text */
 }
 
 .container {
-    width: 90%;
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #333; /* Dark container background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
 }
 
 .responsive-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  animation: slideInFromLeft 0.5s ease;
+}
+
+.responsive-form label {
+  font-size: 16px;
 }
 
 .responsive-form input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #555; /* Dark border */
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: slideInFromRight 0.5s ease;
+  background-color: #444; /* Dark input background */
+  color: #fff; /* White text */
 }
 
 .responsive-form button {
-    padding: 10px;
-    font-size: 16px;
-    color: white;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: slideInFromLeft 0.5s ease;
 }
 
 .responsive-form button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
+
+.responsive-form button:active {
+  transform: translateY(0);
+}
+
+.custom-loader {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.progress-container {
+  width: 100%;
+  height: 20px;
+  background-color: #444; /* Dark loader background */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #007BFF; /* Progress bar color */
+  border-radius: 10px;
+  transition: width 0.5s ease; /* Smooth width transition */
+}
+
+.progress-percent {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* styles.css */
+/* Existing styles... */
+
+.progress-container {
+  display: none; /* Hide progress bar container initially */
+}
+
+.progress-percent {
+  display: none; /* Hide percentage text initially */
+}
+
+/* Existing styles... */
+
+/* styles.css */
+/* Existing styles... */
+/* styles.css */
+
+/* Existing styles... */
+
+.code-display {
+  margin-top: 20px;
+  padding: 10px; /* Add padding to provide space around the code display */
+  font-size: 18px;
+  color: #fff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+  animation: slideInFromBottom 0.5s ease;
+  border: 1px solid #555; /* Add border to contain the code display */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  display: none;
+}
+
+/* Existing styles... */
+
+
